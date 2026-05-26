@@ -1,7 +1,4 @@
-import { useAuth } from "@/contexts/auth-context"
-import { redirect } from "next/navigation"
 import Link from "next/link"
-import { cn } from "@/lib/utils"
 import { UserNav } from "@/components/user-nav"
 import {
   LayoutDashboard,
@@ -27,7 +24,6 @@ export default function DashboardLayout({
 }) {
   return (
     <div className="min-h-screen bg-background">
-      {/* Top Navigation */}
       <header className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-8">
@@ -51,7 +47,6 @@ export default function DashboardLayout({
         </div>
       </header>
 
-      {/* Page Content */}
       <main className="container py-6">
         {children}
       </main>
